@@ -1,0 +1,58 @@
+---
+title: "Demo Stuff"
+format: html
+editor: visual
+---
+
+Make a vector
+```{r}
+set.seed(42)
+my_vals <- runif(30)
+is.vector(my_vals)
+```
+
+Subset it
+```{r}
+my_vals[1:10]
+my_vals[c(3,5:7)]
+```
+
+Sort the vecotr
+```{r}
+sort(my_vals)
+my_vals <- sort(my_vals)
+my_vals
+```
+
+Same with strings
+```{r}
+char_vec <- c('abc','eg','aijfs','13f')
+sort(char_vec)
+```
+
+```{r}
+my_iris <- as.matrix(iris[, 1:4])
+head(my_iris)
+attributes(my_iris)
+```
+```{r}
+my_mat3 <- matrix(c(runif(10), 
+                    rnorm(10),
+                    rgamma(10, shape = 1, scale = 1)),
+                  ncol = 3,
+                  dimnames = list(-2:7, c("Uniform", "Normal", "Gamma")))
+my_mat3
+```
+```{r}
+mat <- matrix(c(1:4, 20:17), ncol = 2,dimnames=list(NULL,c('a','b')))
+mat
+mat[,'b']
+mat[1,]
+```
+
+```{r}
+my_array <- array(1:24, dim = c(4, 2, 3))
+my_array
+my_array[1,2,3]
+```
+
